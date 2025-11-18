@@ -8,6 +8,10 @@ from rest_framework import status
 from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 
+from rest_framework import generics
+from .models import Servicio
+from .serializers import ServicioSerializer
+
 class LoginView(APIView):
     def post(self, request, *args, **kwargs):
         username = request.data.get('username')
@@ -33,3 +37,23 @@ class LoginView(APIView):
                 {"error": "Credenciales inválidas"},
                 status=status.HTTP_401_UNAUTHORIZED
             )
+        
+# Vista para GET (lista) y POST (crear)
+class ServicioListCreateView(generics.ListCreateAPIView):
+    queryset = Servicio.objects.all().order_by('-id')
+    serializer_class = ServicioSerializer
+
+
+# Vista para GET (detalle), PUT (actualizar) y DELETE
+class ServicioRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Servicio.objects.all()
+    serializer_class = ServicioSerializer
+
+class DashboardStatsView(APIView):
+    def get(self, request):
+        # Contar registros reales en la base de datos
+        total_servicios = Servicio.objects.count()
+        
+
+
+

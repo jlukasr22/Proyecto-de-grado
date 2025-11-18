@@ -1,0 +1,138 @@
+/* src/components/GestionServicios.css - Estilos para el CRUD de Servicios */
+
+/* Contenedor Principal */
+.gestion-servicios-page {
+    padding: 2rem;
+    color: var(--jaitech-text);
+    background-color: var(--jaitech-primary); /* Fondo oscuro consistente */
+    min-height: 100vh;
+}
+
+/* Título de la Sección */
+.gestion-servicios-page h1 {
+    color: var(--jaitech-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* --- Tabla de Datos (Look and Feel de la Imagen) --- */
+
+.crud-table {
+    width: 100%;
+    border-collapse: separate; /* Permite border-radius y box-shadow */
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: #212529; /* Gris oscuro para el fondo de la tabla */
+    border-radius: 8px;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen al contenido */
+}
+
+.crud-table th {
+    background-color: #f8f9fa; /* Fondo blanco/gris claro para el encabezado */
+    color: #333;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.crud-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #495057; /* Líneas divisorias suaves */
+    color: #f8f9fa;
+    vertical-align: middle;
+    font-size: 0.9em;
+}
+
+/* Resaltar Fila al pasar el ratón (Opcional, pero da buen feeling) */
+.crud-table tbody tr:hover {
+    background-color: #343a40; 
+}
+
+/* --- Botones de Acción dentro de la tabla (Edit/Delete) --- */
+
+.crud-action-btn {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: 5px;
+}
+
+/* Botón Editar (Amarillo) */
+.btn-edit {
+    background-color: #ffc107;
+    color: #333;
+}
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+/* Botón Eliminar (Rojo) */
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+
+/* --- Botones de Control Inferiores (Add Item, Download CSV) --- */
+
+.control-buttons-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-control {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+/* Botón Add Item (Verde) */
+.btn-add-item {
+    background-color: #28a745;
+    color: white;
+}
+.btn-add-item:hover {
+    opacity: 0.9;
+}
+
+/* Botón Download CSV (Azul) */
+.btn-download-csv {
+    background-color: #007bff;
+    color: white;
+}
+.btn-download-csv:hover {
+    opacity: 0.9;
+}
+
+/* --- Estilos para el Formulario de Registro/Edición --- */
+
+.crud-form-container {
+    padding: 20px;
+    background-color: #343a40;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.crud-form-container input, 
+.crud-form-container textarea {
+    /* ... (Mantener tus estilos de input anteriores, pero ajustados al nuevo esquema de color) ... */
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #00bfff;
+    background-color: #495057;
+    color: white;
+}

@@ -1,0 +1,99 @@
+/* src/components/RegisterServiceType.css */
+
+.admin-register-service-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #1a1a3a;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+  border: 1px solid var(--jaitech-secondary);
+}
+
+.admin-register-service-container h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: var(--jaitech-secondary);
+}
+
+.admin-register-service-container p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #a0a0a0;
+}
+
+.admin-service-form .form-group {
+  margin-bottom: 20px;
+}
+
+.admin-service-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.admin-service-form input[type="text"],
+.admin-service-form input[type="number"],
+.admin-service-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--jaitech-primary);
+  border-radius: 5px;
+  background-color: #0d0d21;
+  color: #e0e0e0;
+  box-sizing: border-box;
+}
+
+.admin-service-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.admin-service-form .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.admin-service-form .checkbox-group label {
+    margin: 0 0 0 10px;
+    font-weight: normal;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--jaitech-primary); 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #0069d9; 
+}
+
+.status-message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.status-message.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-message.error {
+    background-color: #dc3545;
+    color: white;
+}
