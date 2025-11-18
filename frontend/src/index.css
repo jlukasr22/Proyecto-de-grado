@@ -1,0 +1,15 @@
+/* src/index.css */
+:root {
+  --jaitech-primary: #004085;
+  --jaitech-secondary: #00BFFF; /* Color Neon */
+  --font-family: 'Segoe UI', 'Roboto', sans-serif;
+  --transition-speed: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, #0a0a1a, #1a1a3a);
+  color: #e0e0e0;
+  overflow: hidden;
+}
